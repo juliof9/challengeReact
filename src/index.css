@@ -1,0 +1,19 @@
+body {
+  background-color: #2A708C;
+}
+
+.gifs {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gif {
+  padding: 0 2px;
+}
+
+.h1 {
+  color: #F2F2F2;
+}
