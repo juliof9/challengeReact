@@ -5,7 +5,7 @@ import getGifs from '../services/getGifs'
 import { setGif } from '../redux/Gif/gifActions'
 import getNextGifs from '../services/getNextGifs'
 import getPreviousGifs from '../services/getPreviousGifs'
-
+import { Link } from 'react-router-dom'
 
 const Gif = () => {
 
@@ -99,15 +99,17 @@ const Gif = () => {
       <div className='gifs'>
         {(
           gifs?.map((item: any) => (
-            <img
-              key={item.id}
-              className='gif'
-              src={item.images.fixed_height.url}
-              alt=''
-            />
+            <Link to={`/gif/${item.id}`} key={item.id}>
+              <img
+                key={item.id}
+                className='gif'
+                src={item.images.fixed_height.url}
+                alt=''
+              />
+            </Link>
+            
           )))
         }
-        
       </div>
     </div>
   )
